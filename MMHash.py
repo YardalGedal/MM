@@ -1,3 +1,13 @@
+# Script Name	: MMHash.py
+# Author		: Yardal Gedal
+# Created		: 08 October 2016
+# Last Modified	: 08 October 2016
+# Version		: 1.0
+
+# Modifications	: 1.0
+
+# Description	: Hashing entered string 
+
 class MMHash:
   def __init__(self, hashingstring):
     self.__list = '48312569079260143785861457309227963851042674981530612083597432704196852503948761716859420347615283095803762914' * 136
