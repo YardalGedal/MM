@@ -1,8 +1,10 @@
 # MMHash
 MadMonday.ru Hash
+
 # How to use?
+
 ```python
-import MMHash
+from MMHash import MMHash
 H = MMHash('test')
 print(H.hash)
 ```
