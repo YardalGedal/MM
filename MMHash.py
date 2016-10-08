@@ -9,7 +9,7 @@
 # Description	: Hashing entered string 
 
 class MMHash:
-    def __init__(self, hashingstring):
+    def __init__(self, hashingstring='test'):
         self.__list = '48312569079260143785861457309227963851042674981530612083597432704196852503948761716859420347615283095803762914' * 65536
         self.hash = self.hashing(hashingstring)
     def hashing(self, hashingstring):
