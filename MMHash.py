@@ -10,7 +10,6 @@
 
 class MMHash:
     def __init__(self, hashingstring='test'):
-        #self.__list = '48312569079260143785861457309227963851042674981530612083597432704196852503948761716859420347615283095803762914' * 65536
         self.hash = self.hashing(hashingstring)
     def hashing(self, hashingstring):
         a = ''
@@ -27,10 +26,7 @@ class MMHash:
             a = a[2:34]
         return str(a[2:])
     def __list(n):
-        r = re.findall('<p>[0-9]</p>', requests.get('http://www.angio.net/pi/bigpi.cgi?UsrQuery=1&startpos='+ n +'&querytype=substr').text)
-        return r[0][3:4]
+        return n[len(str(n))-1]
     def __hashing_modify(self, s, x, hashing_str):
         n = ord(s) * (x + 1) * len(hashing_str) * (ord(hashing_str[0])) * (ord(hashing_str[len(hashing_str) - 1]))
-        while n >= 199000000:
-            n = n - 199000000
         return self.__list(str(n))
