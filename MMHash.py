@@ -28,5 +28,5 @@ class MMHash:
     def __list(n):
         return n[len(str(n))-1]
     def __hashing_modify(self, s, x, hashing_str):
-        n = ord(s) * (x + 1) * len(hashing_str) * (ord(hashing_str[0])) * (ord(hashing_str[len(hashing_str) - 1]))
+        n = ord(s) * (x + 1) * len(hashing_str)
         return self.__list(str(n))
