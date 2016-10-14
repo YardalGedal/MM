@@ -14,4 +14,4 @@ from MMHash import MMHash
 H = MMHash
 print(H.hashing('test'))
 ```
-or [`test online`](https://www.madmonday.ru/hash.create?data=test)
+or [`test it online`](https://www.madmonday.ru/hash.create?data=test)
