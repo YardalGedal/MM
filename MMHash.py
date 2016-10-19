@@ -16,16 +16,14 @@ class MMHash:
         c = ''
         for s, x in enumerate(hashingstring):
             a = a + str(self.__hashing_modify(str(x), int(s), hashingstring))
-        while len(str(a)) <= 34:
+        while len(str(a)) <= 66:
             b = a
             for s, x in enumerate(b):
                 c = c + str(self.__hashing_modify(str(x), int(s), b))
             a = a + c
         a = hex(int(a))
-        if len(str(a)) > 34:
-            a = a[2:34]
-        return str(a[2:])
-    def __list(n):
+        return str(a[2:66])
+    def __list(self,n):
         return n[len(str(n))-1]
     def __hashing_modify(self, s, x, hashing_str):
         n = ord(s) * (x + 1) * len(hashing_str)
