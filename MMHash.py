@@ -23,8 +23,6 @@ class MMHash:
             a = a + c
         a = hex(int(a))
         return str(a[2:66])
-    def __list(self,n):
-        return n[len(str(n))-1]
     def __hashing_modify(self, s, x, hashing_str):
         n = ord(s) * (x + 1) * len(hashing_str)
-        return self.__list(str(n))
+        return n
