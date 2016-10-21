@@ -1,10 +1,10 @@
 # Script Name	: MMHash.py
 # Author		: Yardal Gedal
 # Created		: 08 October 2016
-# Last Modified	: 08 October 2016
-# Version		: 1.0
+# Last Modified	: 22 October 2016
+# Version		: 5.0.0
 
-# Modifications	: 1.0
+# Modifications	: 5.0.0
 
 # Description	: Hashing entered string 
 
