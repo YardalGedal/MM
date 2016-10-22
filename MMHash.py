@@ -9,20 +9,20 @@
 # Description	: Hashing entered string 
 
 class MMHash:
-    def __init__(self, hashingstring='test'):
-        self.hash = self.hashing(hashingstring)
-    def hashing(self, hashingstring):
+    def __init__(self, hashingstring, hashsize=256):
+        self.hashsize = hashsize
+        self.__hashlen = (self.hashsize / 4) + 2 # Length of hash
+        self.hash = self.__hashing(hashingstring)
+    def __hashing(self, hashingstring):
+        a = self.__exec_hashing_modify(hashingstring)
+        while len(str(a)) < self.__hashlen:
+            a = a + self.__exec_hashing_modify(a)
+        return hex(int(a))[2:int(self.__hashlen)]
+    def __exec_hashing_modify(self, hashingstring):
         a = ''
-        c = ''
         for s, x in enumerate(hashingstring):
-            a = a + str(self.__hashing_modify(str(x), int(s), hashingstring))
-        while len(str(a)) <= 66:
-            b = a
-            for s, x in enumerate(b):
-                c = c + str(self.__hashing_modify(str(x), int(s), b))
-            a = a + c
-        a = hex(int(a))
-        return str(a[2:66])
-    def __hashing_modify(self, s, x, hashing_str):
-        n = ord(s) * (x + 1) * len(hashing_str)
+            a = a + str(self.__hashing_modify(str(x), int(s), len(hashingstring)))
+        return a
+    def __hashing_modify(self, s, x, len_of_hashingstring):
+        n = ord(s) * (x + 1) * len_of_hashingstring * self.hashsize
         return n
