@@ -5,13 +5,9 @@ MadMonday.ru Hash
 
 ```python
 from MMHash import MMHash
-H = MMHash('test')
+hashsize = 256
+H = MMHash('HASHINGSTRING', hashsize)
 print(H.hash)
 ```
-or
-```python
-from MMHash import MMHash
-H = MMHash
-print(H.hashing('test'))
-```
+
 or [`test it online`](https://www.madmonday.ru/hash.create?data=test)
