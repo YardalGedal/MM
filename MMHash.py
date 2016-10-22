@@ -2,9 +2,9 @@
 # Author		: Yardal Gedal
 # Created		: 08 October 2016
 # Last Modified	: 22 October 2016
-# Version		: 5.0.0
+# Version		: 6.0.0
 
-# Modifications	: 5.0.0
+# Modifications	: 6.0.0
 
 # Description	: Hashing entered string 
 
