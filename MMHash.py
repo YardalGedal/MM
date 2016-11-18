@@ -19,7 +19,7 @@ class MMHash:
         while len(str(a)) < self.__hashlen + self.x:
             a = a + self.__exec_hashing_modify(a)
         a = hex(int(a))[self.x:int(self.__hashlen)]
-        return a[::-1]
+        return a
     def __exec_hashing_modify(self, hashingstring):
         a = ''
         for s, x in enumerate(hashingstring):
