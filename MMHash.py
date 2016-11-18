@@ -1,23 +1,26 @@
 # Script Name	: MMHash.py
 # Author		: Yardal Gedal
 # Created		: 08 October 2016
-# Last Modified	: 22 October 2016
-# Version		: 6.0.0
+# Last Modified	: 18 November 2016
+# Version		: 7.0.0
 
-# Modifications	: 6.0.0
+# Modifications	: 7.0.0
 
 # Description	: Hashing entered string 
 
 class MMHash:
     def __init__(self, hashingstring, hashsize=256):
         self.hashsize = hashsize
-        self.__hashlen = (self.hashsize / 4) + 2 # Length of hash
+        self.x = 16 # offset, may be
+        # x = hashsize / 16
+        self.__hashlen = (self.hashsize / 4) + x # Length of hash
         self.hash = self.__hashing(hashingstring)
     def __hashing(self, hashingstring):
         a = self.__exec_hashing_modify(hashingstring)
-        while len(str(a)) < self.__hashlen:
+        while len(str(a)) < self.__hashlen + self.x:
             a = a + self.__exec_hashing_modify(a)
-        return hex(int(a))[2:int(self.__hashlen)]
+        a = hex(int(a))[self.x:int(self.__hashlen)]
+        return a[::-1]
     def __exec_hashing_modify(self, hashingstring):
         a = ''
         for s, x in enumerate(hashingstring):
