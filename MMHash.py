@@ -13,8 +13,8 @@ class MMHash:
         self.hashsize = hashsize
         self.x = int(hashsize / 16)
         self.__hashlen = (self.hashsize / 4) + self.x # Length of hash
-        self.hash = self.__hashing(hashingstring)
-    def __hashing(self, hashingstring):
+        self.hash = self.hashing(hashingstring)
+    def hashing(self, hashingstring):
         a = self.__exec_hashing_modify(hashingstring)
         while len(str(a)) < self.__hashlen + self.x:
             a = a + self.__exec_hashing_modify(a)
