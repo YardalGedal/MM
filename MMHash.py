@@ -11,8 +11,7 @@
 class MMHash:
     def __init__(self, hashingstring, hashsize=256):
         self.hashsize = hashsize
-        self.x = 16 # offset, may be
-        # self.x = hashsize / 16
+        self.x = int(hashsize / 16)
         self.__hashlen = (self.hashsize / 4) + self.x # Length of hash
         self.hash = self.__hashing(hashingstring)
     def __hashing(self, hashingstring):
