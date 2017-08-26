@@ -1,12 +1,12 @@
 # Script Name : MMHash.py
 # Author : Yardal Gedal
 # Created : 08 October 2016
-# Last Modified	: 27 August 2017
+# Last Modified	: 18 November 2016
 # Version : 8.0.0
 
 # Modifications	: 8.0.0
 
-# Description : Hashing input string
+# Description : Hashing entered string
 
 from functools import reduce
 
@@ -17,4 +17,4 @@ class MMHash:
         f = lambda ords: str(hex(reduce(lambda x, y: int(x)*int(y),  ords) + int("".join(ords))))
         while len(S) < L:
             S = f([str((n + x) * x) + str(ord(i)) for n, i in enumerate(S)])
-        print(S[-L//2:])
+        return S[-L//2:]
