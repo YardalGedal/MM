@@ -4,7 +4,7 @@
 # Last Modified	: 27 August 2017
 # Version : 8.0.0
 
-# Modifications	: 8.0.2
+# Modifications	: 8.0.3
 
 # Description : Hashing input string
 
@@ -18,4 +18,4 @@ class MMHash:
         S = S + str(x)
         while len(S) < L:
             S = f([str((n + x) * x) + str(ord(i)) for n, i in enumerate(S)])
-        return S[-L//2:]
+        print(S[-L//2:])
