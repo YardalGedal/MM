@@ -8,13 +8,16 @@
 
 # Description : Crypt/encrupy input string
 
+from math import e
+
 class MMCrypt:
+    
     def __init__(self):
-        self.salt = 1/e
-        self.accuracy = 1 # more - better, only int
+        self.SALT = 1/e
+        self.ACCURACY = 1 # bigger is better, only integer
         
-    def crypt(self, data):
-        return ",".join([str(round(ord(i)*self.salt, self.accuracy)) for i in data])
+    def crypt(self, DATA):
+        return ",".join([str(round(ord(i)*self.SALT, self.ACCURACY)) for i in DATA])
     
     def encrypt(self, data):
-        return "".join([chr(round(float(i)/self.salt)) for i in data.split(',')])
+        return "".join([chr(round(float(i)/self.SALT)) for i in DATA.split(',')])
