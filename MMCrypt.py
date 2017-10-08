@@ -19,5 +19,5 @@ class MMCrypt:
     def crypt(self, DATA):
         return ",".join([str(round(ord(i)*self.SALT, self.ACCURACY)) for i in DATA])
     
-    def encrypt(self, data):
+    def encrypt(self, DATA):
         return "".join([chr(round(float(i)/self.SALT)) for i in DATA.split(',')])
