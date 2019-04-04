@@ -1,7 +1,7 @@
-# MMHash
+## MMHash
 MadMonday Hash
 
-# How to use?
+#### How to use?
 
 ```python
 from MMHash import MMHash
@@ -9,10 +9,10 @@ hashsize = 256
 print(MMHash('text', hashsize))
 ```
 
-# MMCrypt
+## MMCrypt
 MadMonday Crypt
 
-# How to use?
+#### How to use?
 
 ```python
 from MMCrypt import MMCrypt
